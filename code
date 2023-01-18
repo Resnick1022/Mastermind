@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Mastermind
+{
+        public static void main(String[]args)
+        {
+            
+
+            scanner sc = new Scanner(System.in);
+            
+
+            var num = readInt("Player 2, enter the 4 digit number, using digits 0-9");
+        }
+}
