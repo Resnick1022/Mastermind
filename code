@@ -1,6 +1,6 @@
 let code = [];
 let remaining = [];
-const colors = ['red', 'yellow', 'green', 'blue', 'black'];
+const colors = ['red', 'yellow', 'green', 'blue', 'white', 'black'];
 let counter = 1;
 let counter2 = 1;
 let won = false;
@@ -22,3 +22,32 @@ const row7 = new Row();
 const row8 = new Row();
 const row9 = new Row();
 const row10 = new Row();
+
+//put in the user color picker here
+
+
+let code1 = [...code];
+
+function bgColor(e,c) {
+  $(`${e}`).css('background-color', `${c}`);
+  }
+  
+  function checkRow(arr, row, next, prev) {
+  if(arr.join("") === code.join("")) {
+    won = true;
+    $('.code > span').slideDown();
+    $('.header').text("You cracked the code!").css('color', 'green');
+    for(i=0; i<arr.length; i++) {
+      $(`.dots${row} > .one${i + 1}`).css('background-color', 'black');
+    }
+  } else {   
+   for(i=0; i<arr.length; i++) {
+        if(arr[i] === code[i]) {
+          $(`.dots${row} > .one${counter2}`).css('background-color', 'black');
+          code1.splice(i,1, "");
+          remaining.push("empty");
+          counter2 += 1;
+        }  else {
+             remaining.push(arr[i]);
+        }
+      }  
