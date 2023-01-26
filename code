@@ -22,6 +22,7 @@ const row7 = new Row();
 const row8 = new Row();
 const row9 = new Row();
 const row10 = new Row();
+
 alert("Player 2, it is your turn, you must enter a code");
 var code1 = prompt("Please enter a group of 4 colors, repeats allowed, from red, yellow, green, blue, black and white. Put each of the colors inside of one of this symbol on either side ' and separate them by commas );
 
