@@ -150,8 +150,22 @@ body {
     font-size: 14px;
     color: white;
     background-color: orange;
+}
+  
+ .rules {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding-bottom: 50px;
   }
-    .content {
+  
+  .rules-header {
+    border-bottom: 2px solid white;
+  }
+  
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,3 +176,8 @@ body {
     line-height: 25px;
   }
   
+  .how, .obj {
+    background-color: #9E9E9E;
+    color: white;
+    padding: 1px;
+  }
