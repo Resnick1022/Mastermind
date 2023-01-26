@@ -23,7 +23,7 @@ const row8 = new Row();
 const row9 = new Row();
 const row10 = new Row();
 
-//put in the user color picker here
+
 
 
 let code1 = [...code];
@@ -38,12 +38,12 @@ function bgColor(e,c) {
     $('.code > span').slideDown();
     $('.header').text("You cracked the code!").css('color', 'green');
     for(i=0; i<arr.length; i++) {
-      $(`.dots${row} > .one${i + 1}`).css('background-color', 'black');
+      $(`.dot${row} > .one${i + 1}`).css('background-color', 'black');
     }
   } else {   
    for(i=0; i<arr.length; i++) {
         if(arr[i] === code[i]) {
-          $(`.dots${row} > .one${counter2}`).css('background-color', 'black');
+          $(`.dot${row} > .one${counter2}`).css('background-color', 'black');
           code1.splice(i,1, "");
           remaining.push("empty");
           counter2 += 1;
@@ -54,7 +54,7 @@ function bgColor(e,c) {
       for(i=0; i<arr.length; i++) {
         if(code1.includes(remaining[i])) {
           code1.splice(code1.indexOf(remaining[i]), 1, "blank");  
-          $(`.dots${row} > .one${counter2}`).css('background-color', 'white'); 
+          $(`.dot${row} > .one${counter2}`).css('background-color', 'white'); 
           counter2 += 1;
         }
       }
