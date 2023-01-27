@@ -69,7 +69,7 @@ bgColor('.color-two', `${code[1]}`);
 bgColor('.color-three', `${code[2]}`);
 bgColor('.color-four', `${code[3]}`);
 
-row10.turn = true;
+row8.turn = true;
 
 $('.bottom > span').on('click', (e) => {
   let clickedItem = e.target;
