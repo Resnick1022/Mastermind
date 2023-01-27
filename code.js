@@ -22,7 +22,7 @@ const row7 = new Row();
 const row8 = new Row();
 
 alert("Player 2, it is your turn, you must enter a code");
-var code1 = prompt("Please enter a group of 4 colors, written as numbers, repeats allowed, red=1 yellow=2, green=3, blue=4, and black=5. Put each of the colors inside of one of this symbol on either side ' and separate them by commas ");
+ code1 = prompt("Please enter a group of 4 colors, repeats allowed, red, yellow, green, blue, and black. Put each of the colors inside of one of this symbol on either side ' and separate them by commas ");
 
 //let code1 = [...code];
 alert("Player 1 now plays");
@@ -36,12 +36,12 @@ function bgColor(e,c) {
     $('.code > span').slideDown();
     $('.header').text("You cracked the code!").css('color', 'green');
     for(i=0; i<arr.length; i++) {
-      $(`.dot${row} > .one${i + 1}`).css('background-color', 'black');
+      $(`.dots${row} > .one${i + 1}`).css('background-color', 'black');
     }
   } else {   
    for(i=0; i<arr.length; i++) {
         if(arr[i] === code[i]) {
-          $(`.dot${row} > .one${counter2}`).css('background-color', 'black');
+          $(`.dots${row} > .one${counter2}`).css('background-color', 'black');
           code1.splice(i,1, "");
           remaining.push("empty");
           counter2 += 1;
@@ -52,7 +52,7 @@ function bgColor(e,c) {
       for(i=0; i<arr.length; i++) {
         if(code1.includes(remaining[i])) {
           code1.splice(code1.indexOf(remaining[i]), 1, "blank");  
-          $(`.dot${row} > .one${counter2}`).css('background-color', 'white'); 
+          $(`.dots${row} > .one${counter2}`).css('background-color', 'white'); 
           counter2 += 1;
         }
       }
