@@ -22,7 +22,7 @@ const row7 = new Row();
 const row8 = new Row();
 
 alert("Player 2, it is your turn, you must enter a code");
-var code1 = prompt("Please enter a group of 4 colors, repeats allowed, from red, yellow, green, blue, and black. Put each of the colors inside of one of this symbol on either side ' and separate them by commas ");
+var code1 = prompt("Please enter a group of 4 colors, written as numbers, repeats allowed, red=1 yellow=2, green=3, blue=4, and black=5. Put each of the colors inside of one of this symbol on either side ' and separate them by commas ");
 
 //let code1 = [...code];
 alert("Player 1 now plays");
@@ -56,7 +56,7 @@ function bgColor(e,c) {
           counter2 += 1;
         }
       }
-            counter = 1;
+      counter = 1;
       counter2 = 1;
       next.turn = true;
       prev.turn = false;
