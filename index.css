@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Quicksand";
+    font-family: "Quicksand", monospace;
   }
    .game {
     height: 100%;
@@ -11,7 +11,7 @@ body {
   }
   
   .header {
-    color: black;
+    color: whitesmoke;
     margin-top: 30px;
     font-size: 40px;
   }
@@ -71,7 +71,7 @@ body {
     display: grid;
     place-items: center;
   }
- .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8{
+ .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
