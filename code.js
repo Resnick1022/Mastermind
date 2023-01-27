@@ -20,8 +20,6 @@ const row5 = new Row();
 const row6 = new Row();
 const row7 = new Row();
 const row8 = new Row();
-const row9 = new Row();
-const row10 = new Row();
 
 alert("Player 2, it is your turn, you must enter a code");
 var code1 = prompt("Please enter a group of 4 colors, repeats allowed, from red, yellow, green, blue, and black. Put each of the colors inside of one of this symbol on either side ' and separate them by commas ");
@@ -76,18 +74,10 @@ row10.turn = true;
 $('.bottom > span').on('click', (e) => {
   let clickedItem = e.target;
   if(clickedItem.className !== 'delete' && clickedItem.className !== 'submit') {
-    if(row10.turn && row10.spaces.length < 4) {
-      row10.spaces.push(clickedItem.className);
-      $(`.ten-${counter}`).css('background-color', `${clickedItem.className}`);
+    if(row8.turn && row8.spaces.length < 4) {
+      row8.spaces.push(clickedItem.className);
+      $(`.eight-${counter}`).css('background-color', `${clickedItem.className}`);
       counter += 1;
-    }  else if(row9.turn && row9.spaces.length < 4) {
-         row9.spaces.push(clickedItem.className);
-         $(`.nine-${counter}`).css('background-color', `${clickedItem.className}`);
-         counter += 1;  
-    }  else if(row8.turn && row8.spaces.length < 4) {
-         row8.spaces.push(clickedItem.className);
-         $(`.eight-${counter}`).css('background-color', `${clickedItem.className}`);
-         counter += 1;  
     }  else if(row7.turn && row7.spaces.length < 4) {
          row7.spaces.push(clickedItem.className);
          $(`.seven-${counter}`).css('background-color', `${clickedItem.className}`);
@@ -121,16 +111,10 @@ $('.bottom > span').on('click', (e) => {
 });
 $('.delete').on('click', () => {
   if(won === false) {
-    if(row10.turn && counter > 1) {
-      row10.spaces.pop();
+    if(row8.turn && counter > 1) {
+      row8.spaces.pop();
       counter -= 1;     
       $(`.eight-${counter}`).css('background-color', '#CECECE');
-          }  else if(row9.turn && counter > 1) {
-      row9.spaces.pop();
-      counter -= 1;   
-      }  else if(row8.turn && counter > 1) {
-      row8.spaces.pop();
-      counter -= 1;   
     }  else if(row7.turn && counter > 1) {
       row7.spaces.pop();
       counter -= 1;   
@@ -141,7 +125,7 @@ $('.delete').on('click', () => {
       $(`.six-${counter}`).css('background-color', '#CECECE');
     }  else if(row5.turn && counter > 1) {
       row5.spaces.pop();
-      counter -= 1;      
+      counter -= 1;       
       $(`.five-${counter}`).css('background-color', '#CECECE');
     }  else if(row4.turn && counter > 1) {
       row4.spaces.pop();
@@ -163,12 +147,8 @@ $('.delete').on('click', () => {
   }
 });
 $('.submit').on('click', () => {
-  if(row10.turn && row10.spaces.length === 4){
-    checkRow(row10.spaces, 10, row9, row10);
-   }  else if(row9.turn && row9.spaces.length === 4) {
-       checkRow(row8.spaces, 9, row8, row9);
-     }  else if(row8.turn && row8.spaces.length === 4) {
-       checkRow(row8.spaces, 8, row7, row8);
+  if(row8.turn && row8.spaces.length === 4){
+    checkRow(row8.spaces, 8, row7, row8);
   }  else if(row7.turn && row7.spaces.length === 4) {
        checkRow(row7.spaces, 7, row6, row7);
   }  else if(row6.turn && row6.spaces.length === 4) {

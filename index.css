@@ -64,21 +64,21 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
   }
   .grid > * {
     border: 1px solid #9E9E9E;
     display: grid;
     place-items: center;
   }
- .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9, .dot10{
+ .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 5px 10px;
      }
   
-  .dot1 > div, .dot2 > div, .dot3 > div, .dot4 > div, .dot5 > div, .dot6 > div, .dot7 > div, .dot8 > div, .dot9 > div, .dot10 > div {
+  .dot1 > div, .dot2 > div, .dot3 > div, .dot4 > div, .dot5 > div, .dot6 > div, .dot7 > div, .dot8 > div{
     width: 10px;
     box-shadow: inset 0 0.5px 0.5px 0.5px #262626;
     height: 10px;
