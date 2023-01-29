@@ -164,7 +164,7 @@ $('.submit').on('click', () => {
        checkRow(row1.spaces, 1, "", row1);
        if(won === false) {
         $('.code > span').slideDown();
-        $('.header').text("Failed").css('color', 'red');
+        $('.header').text("Refresh to try again!").css('color', 'red');
        }
   }    
 });
