@@ -12,6 +12,7 @@ class Row {
       this.spaces = [];
     }
 }
+
 const row1 = new Row();
 const row2 = new Row();
 const row3 = new Row();
