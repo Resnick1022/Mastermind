@@ -1,17 +1,17 @@
 let code = [];
 let remaining = [];
-const colors = ['red', 'yellow', 'green', 'blue','black'];
+const colors = ['red', 'yellow', 'green', 'blue', 'black'];
 let counter = 1;
 let counter2 = 1;
 let won = false;
 
-
 class Row {
-    constructor() {
-      this.turn = false;
-      this.spaces = [];
-    }
+  constructor() {
+    this.turn = false;
+    this.spaces = [];
+  }
 }
+
 const row1 = new Row();
 const row2 = new Row();
 const row3 = new Row();
@@ -28,18 +28,17 @@ let code1 = [...code];
     
 function bgColor(e,c) {
   $(`${e}`).css('background-color', `${c}`);
-  }
-  
-  function checkRow(arr, row, next, prev) {
+}
+function checkRow(arr, row, next, prev) {
   if(arr.join("") === code.join("")) {
     won = true;
     $('.code > span').slideDown();
-    $('.header').text("You cracked the code!").css('color', 'green');
+    $('.header').text("You've Cracked the Code").css('color', 'green');
     for(i=0; i<arr.length; i++) {
       $(`.dots${row} > .one${i + 1}`).css('background-color', 'black');
     }
-  } else {   
-   for(i=0; i<arr.length; i++) {
+  } else {    
+      for(i=0; i<arr.length; i++) {
         if(arr[i] === code[i]) {
           $(`.dots${row} > .one${counter2}`).css('background-color', 'black');
           code1.splice(i,1, "");
@@ -125,7 +124,7 @@ $('.delete').on('click', () => {
       $(`.six-${counter}`).css('background-color', '#CECECE');
     }  else if(row5.turn && counter > 1) {
       row5.spaces.pop();
-      counter -= 1;       
+      counter -= 1;      
       $(`.five-${counter}`).css('background-color', '#CECECE');
     }  else if(row4.turn && counter > 1) {
       row4.spaces.pop();
@@ -169,5 +168,4 @@ $('.submit').on('click', () => {
        }
   }    
 });
-
 
