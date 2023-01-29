@@ -21,11 +21,11 @@ const row6 = new Row();
 const row7 = new Row();
 const row8 = new Row();
 
-alert("Player 2, it is your turn, you must enter a code");
- code1 = prompt("Please enter a group of 4 colors, repeats allowed, red, yellow, green, blue, and black. Put each of the colors inside of one of this symbol on either side ' and separate them by commas ");
+for(i=0; i<4; i++) {
+  code.push(colors[Math.floor(Math.random() * 5)]);
 
-//let code1 = [...code];
-alert("Player 1 now plays");
+let code1 = [...code];
+    
 function bgColor(e,c) {
   $(`${e}`).css('background-color', `${c}`);
   }
