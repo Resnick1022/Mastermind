@@ -23,7 +23,7 @@ const row8 = new Row();
 
 for(i=0; i<4; i++) {
   code.push(colors[Math.floor(Math.random() * 5)]);
-
+}
 let code1 = [...code];
     
 function bgColor(e,c) {
